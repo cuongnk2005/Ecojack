@@ -94,7 +94,7 @@
       <button onclick="alert('Bạn đang dùng thử ứng dụng AI!')">Dùng thử</button>
     </div>
     <div class="right">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Jackfruit_hanging.JPG" alt="Cây mít">
+      <img src="<?php echo _WEB_ROOT_ . '/public/asset/images/anhHome.png' ?>" alt="Cây mít">
       <p><strong>🕷️ Spider mite (Tetranychus urticae)</strong></p>
       <p><strong>🍂 Anthracnose (Colletotrichum gloeosporioides)</strong></p>
     </div>
