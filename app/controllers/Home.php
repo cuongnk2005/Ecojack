@@ -1,6 +1,7 @@
 <?php
 class Home extends Controller{
     public $model;
+    private $data = [];
     public function __construct() {
       $this->model = $this->Model("Homemodel");
     }
@@ -13,7 +14,9 @@ class Home extends Controller{
     //  echo '<pre>';
     //  print_r($datail);
     //  echo '</pre>';
-    $this->render('index');
+      $this->data["content"] = 'index';
+       $this->data['subcontent']['kq'] = "haha";
+     $this->render('layout/layout_client',  $this->data); 
     }
     }
 ?>
