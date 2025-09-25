@@ -1,12 +1,15 @@
 
 <?php
-class Person extends Controller {
+class Thuvienanh extends Controller {
     public $model;
+        private $data = [];
 function __construct() {
-$this->model = $this->Model("Personmodel");
+// $this->model = $this->Model("Personmodel");
 }
 public function index() {
-echo '<br> đây là index của Person';
+   $this->data["content"] = 'gallery';
+       $this->data['subcontent']['kq'] = "haha";
+     $this->render('layout/layout_client',  $this->data); 
 }
 public function infor() {
     $data = [];

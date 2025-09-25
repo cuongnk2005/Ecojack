@@ -11,6 +11,8 @@
     $this->render("block/header");
     $this->render($content,$subcontent);
     ?>
-    <?php require_once _DIR_ROOT.'/app/views/block/footer.php' ?>
+    <?php
+     require_once _DIR_ROOT.'/app/views/block/footer.php'
+      ?> 
 </body>
 </html>

@@ -1,5 +1,5 @@
 <?php 
-echo"<br> 7. da gọi đến Homemodel <br>";
+// echo"<br> 7. da gọi đến Homemodel <br>";
 class Homemodel {
     protected $table = 'products';
     public function getlist(){

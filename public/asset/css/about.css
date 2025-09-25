@@ -1,0 +1,188 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #C8F3B0;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Intro (chia trái - phải) ===== */
+.intro-section {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 30px 20px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start; /* căn intro và ảnh trên cùng */
+}
+
+.intro-left {
+  flex: 2;
+}
+
+.intro-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.intro-right img {
+  max-width: 100%;
+  height: auto;
+  max-width: 360px;
+  display: block;
+}
+
+h2 {
+  color: #2b7a3d;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.intro {
+  font-size: 26px;
+  line-height: 1.6;
+}
+
+/* ===== Cards section (tách riêng) ===== */
+.cards-section {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* mặc định 2 cột */
+  gap: 20px;
+}
+
+.card {
+  border-radius: 10px;
+  padding: 18px;
+  color: #333;
+  margin: 0 40px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.card h3 span {
+  margin-right: 8px;
+}
+
+.card p {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+/* màu cho từng card */
+.idea { background: #fffbe6; }
+.team { background: #e6f0ff; }
+.mission { background: #ffe6f0; }
+.future { background: #fff3e6; }
+
+/* ===== Responsive ===== */
+
+/* Tablet ngang (<= 1024px) */
+@media (max-width: 1024px) {
+  .intro-section {
+    max-width: 95%;
+  }
+  h2 { font-size: 24px; }
+  .intro { font-size: 20px; }
+  .intro-right img { max-width: 300px; }
+}
+
+/* Tablet dọc (<= 768px): intro đổi thành cột */
+@media (max-width: 768px) {
+  .intro-section {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .intro-right {
+    order: -1;
+    margin-bottom: 18px;
+    justify-content: center;
+  }
+  .intro-left { width: 100%; }
+  .intro-right img { max-width: 60%; }
+}
+
+/* Mobile lớn (<= 576px): card thành 1 cột */
+@media (max-width: 576px) {
+  .cards-section {
+    grid-template-columns: 1fr; /* 1 cột */
+  }
+  .card { padding: 14px; }
+  h2 { font-size: 20px; }
+  .intro { font-size: 20px; }
+  .intro-right img { max-width: 80%; }
+}
+
+/* Mobile rất nhỏ */
+@media (max-width: 400px) {
+  body { font-size: 20px; }
+  h2 { font-size: 18px; }
+  .intro { font-size: 20px; }
+}
+/* ===== Animation Slide In ===== */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Intro section */
+.intro-left {
+  opacity: 0;
+  animation: slideInLeft 1s ease forwards;
+}
+
+.intro-right {
+  opacity: 0;
+  animation: slideInRight 1s ease forwards;
+  animation-delay: 0.3s; /* trễ chút cho đẹp */
+}
+
+/* Cards */
+.card {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* hiệu ứng lần lượt từng card */
+.cards-section .card:nth-child(1) { animation-delay: 0.2s; }
+.cards-section .card:nth-child(2) { animation-delay: 0.4s; }
+.cards-section .card:nth-child(3) { animation-delay: 0.6s; }
+.cards-section .card:nth-child(4) { animation-delay: 0.8s; }
