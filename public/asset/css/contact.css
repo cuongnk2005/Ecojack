@@ -1,0 +1,158 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #C8F3B0;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-section {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.contact-section h2 {
+  color: #2b7a3d;
+  margin-bottom: 5px;
+}
+
+.sub-title {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Container 2 phần: thông tin + form */
+.contact-container {
+  width: 900px;
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative; /* để chứa form và ảnh */
+}
+
+/* Thông tin liên hệ */
+.contact-info {
+  flex: 1;
+  font-size: 14px;
+  line-height: 1.6;
+  z-index: 1;
+}
+
+/* Form liên hệ */
+.contact-form {
+  flex: 1;
+  position: relative;
+  z-index: 2; /* form nằm trên ảnh */
+  background: transparent;
+}
+
+.contact-form h3 {
+  margin-bottom: 10px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 60%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.contact-form button {
+  width: 65%;
+  background: #2b7a3d;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background: #256b34;
+}
+
+/* Ảnh minh họa */
+.contact-image {
+  position: fixed;   /* ảnh dính góc phải dưới */
+  right: 200px;
+  bottom: 50px;
+  z-index: 0;
+  opacity: 0.95;
+  pointer-events: none; /* tránh che form */
+}
+
+.contact-image img {
+  max-width: 700px;
+  height: auto;
+}
+
+/* -------- Responsive -------- */
+
+/* Tablet (từ 768px đến 1199px) */
+@media (max-width: 1199px) {
+  .contact-container {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+    width: 80%; /* rộng hơn trên tablet */
+  }
+
+  .contact-image {
+    position: static; /* không fixed nữa */
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .contact-image img {
+    max-width: 400px; /* ảnh nhỏ lại */
+  }
+}
+
+/* Mobile nhỏ (dưới 768px) */
+@media (max-width: 767px) {
+  .contact-container {
+    padding: 15px;
+    gap: 20px;
+  }
+
+  .contact-info {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+    width: 100%; /* chiếm full màn hình */
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .contact-image {
+    margin-top: 15px;
+  }
+
+  .contact-image img {
+    max-width: 280px; /* ảnh nhỏ gọn */
+  }
+}

@@ -70,6 +70,33 @@
       max-width: 400px;
       border-radius: 10px;
     }
+/* Ban đầu ẩn và trượt */
+.left {
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: slideInLeft 1s ease forwards;
+}
+
+.right {
+  opacity: 0;
+  transform: translateX(100px);
+  animation: slideInRight 1s ease forwards;
+  animation-delay: 0.5s; /* trễ một chút cho đẹp */
+}
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
   
 
