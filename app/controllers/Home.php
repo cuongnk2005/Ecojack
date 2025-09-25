@@ -1,5 +1,4 @@
 <?php
-echo "<br> đã chạy vào home";
 class Home extends Controller{
     public $model;
     public function __construct() {
@@ -14,7 +13,7 @@ class Home extends Controller{
     //  echo '<pre>';
     //  print_r($datail);
     //  echo '</pre>';
-    $this->render('home/index');
+    $this->render('index');
     }
     }
 ?>

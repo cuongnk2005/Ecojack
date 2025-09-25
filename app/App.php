@@ -60,7 +60,7 @@ class App
            
         } else {
             $this->__controller = ucfirst($this->__controller);
-            echo $this->__controller;
+            // echo $this->__controller;
             $url = $this->__controller .'';
         }
 
