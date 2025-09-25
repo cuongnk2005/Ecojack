@@ -144,9 +144,9 @@
         <img src="<?php echo _WEB_ROOT_ . '/public/asset/images/logo 1.png' ?>" alt="Logo ứng dụng AI">
       </div>
       <nav>
-        <a href="#">Trang chủ</a>
+        <a  href="">Trang chủ</a>
         <a href="#">Chat AI</a>
-        <a href="#">Thư viện ảnh</a>
+        <a href="<?php echo _WEB_ROOT_ ?>/thuvienanh">Thư viện ảnh</a>
         <a href="#">Giới thiệu</a>
         <a href="#">Liên hệ</a>
       </nav>
