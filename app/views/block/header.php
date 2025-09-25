@@ -151,8 +151,8 @@
         <a href="<?php echo _WEB_ROOT_ ?>/home/contact">Liên hệ</a>
       </nav>
       <div class="auth-buttons">
-        <button>Đăng ký</button>
-        <button>Đăng nhập</button>
+       <a href="<?php echo _WEB_ROOT_ ?>/home/register"><button>Đăng ký</button></a>
+       <a href="<?php echo _WEB_ROOT_ ?>/home/login"><button>Đăng nhập</button></a>
       </div>
     </div>
   </header>

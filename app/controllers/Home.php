@@ -35,5 +35,19 @@ class Home extends Controller
     $this->render('layout/layout_client', $this->data);
     
   }
+    public function login()
+  {
+    $this->data["content"] = 'auth/login';
+     $this->data['subcontent']['kq'] = "haha";
+    $this->render('layout/layout_client', $this->data);
+    
+  }
+   public function register()
+  {
+    $this->data["content"] = 'auth/register';
+     $this->data['subcontent']['kq'] = "haha";
+    $this->render('layout/layout_client', $this->data);
+    
+  }
 }
 ?>

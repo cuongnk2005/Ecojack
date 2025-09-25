@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng ký</title>
-    <link rel="stylesheet" href="/Ecojack/public/asset/css/register.css">
+    <link rel="stylesheet" href="<?php echo _WEB_ROOT_ ?>/public/asset/css/register.css?v=1.2">
 </head>
 
 <body>
@@ -13,7 +13,7 @@
         <div class="login-section">
             <div class="logo">
                 <div class="logo-icon">
-                    <img src="/Ecojack/public/asset/images/bg_login.png" alt="Logo">
+                    <img src="<?php echo _WEB_ROOT_ ?>/public/asset/images/bg_login.png" alt="Logo">
                 </div>
             </div>
 
@@ -56,16 +56,16 @@
 
             <div class="social-login">
                 <button class="social-btn">
-                    <img class="facebook-btn" src="/Ecojack/public/asset/images/logo_facebook.png" alt="" style="width:36px;height:36px;object-fit:contain;">
+                    <img class="facebook-btn" src="<?php echo _WEB_ROOT_ ?>public/asset/images/logo_facebook.png" alt="" style="width:36px;height:36px;object-fit:contain;">
                 </button>
                 <button class="social-btn">
-                    <img class="google-btn" src="/Ecojack/public/asset/images/logo_google.png" alt="" style="width:28px;height:28px;object-fit:contain;">
+                    <img class="google-btn" src="<?php echo _WEB_ROOT_ ?>public/asset/images/logo_google.png" alt="" style="width:28px;height:28px;object-fit:contain;">
                 </button>
             </div>
         </div>
 
         <div class="illustration">
-            <img src="/Ecojack/public/asset/images/bgr_login.png" alt="Durian Illustration" class="durian-image">
+            <img src="<?php echo _WEB_ROOT_ ?>/public/asset/images/bgr_login.png" alt="Durian Illustration" class="durian-image">
         </div>
     </div>
 
