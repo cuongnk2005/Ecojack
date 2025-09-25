@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng nhập</title>
-    <link rel="stylesheet" href="/Ecojack/public/asset/css/login.css">
+    <title>Đăng ký</title>
+    <link rel="stylesheet" href="/Ecojack/public/asset/css/register.css">
 </head>
 
 <body>
@@ -17,7 +17,7 @@
                 </div>
             </div>
 
-            <h1 class="title">Đăng nhập</h1>
+            <h1 class="title">Đăng ký</h1>
 
             <form>
                 <div class="form-group">
@@ -37,13 +37,22 @@
                     </div>
                 </div>
 
-                <button type="submit" class="login-btn">
-                    Login
+                <div class="form-group">
+                    <label class="form-label">Nhập lại mật khẩu</label>
+                    <div class="input-wrapper">
+                        <span class="input-icon">🔒</span>
+                        <input type="password" class="form-input" placeholder="••••••••">
+                        <button type="button" class="password-toggle">👁️</button>
+                    </div>
+                </div>
+
+                <button type="submit" class="register-btn">
+                    Register
                     <span>→</span>
                 </button>
             </form>
 
-            <p class="register-text"><a style="text-decoration: none;" href="./register.php">Đăng ký</a> tại đây</p>
+            <p class="register-text"> <a style="text-decoration: none;" href="./login.php">Đăng nhập</a> tại đây</p>
 
             <div class="social-login">
                 <button class="social-btn">
@@ -73,22 +82,19 @@
                 toggleBtn.textContent = '👁️';
             }
         });
-
-
-
         // Form submission
         document.querySelector('form').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Đăng nhập thành công!');
+            alert('Đăng ký thành công!');
         });
 
         // Social login buttons
         document.querySelector('.facebook-btn').addEventListener('click', function() {
-            alert('Đăng nhập bằng Facebook');
+            alert('Đăng ký bằng Facebook');
         });
 
         document.querySelector('.google-btn').addEventListener('click', function() {
-            alert('Đăng nhập bằng Google');
+            alert('Đăng ký bằng Google');
         });
     </script>
 </body>

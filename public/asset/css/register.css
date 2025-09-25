@@ -112,8 +112,8 @@ body {
     cursor: pointer;
 }
 
-/* Nút login */
-.login-btn {
+/* Nút register */
+.register-btn {
     width: 100%;
     padding: 15px;
     background: linear-gradient(45deg, #2e7d32, #4caf50);
@@ -131,7 +131,7 @@ body {
     margin-bottom: 20px;
 }
 
-.login-btn:hover {
+.register-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 20px rgba(46, 125, 50, 0.3);
 }
