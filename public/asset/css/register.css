@@ -4,30 +4,33 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #c8e6c9, #a5d6a7);
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    color: #2e7d32;
+/* body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #c8e6c9, #a5d6a7);
+  min-height: 100vh;
+  padding: 20px;
+  color: #2e7d32;
+} */
+.register-wrapper {
+ display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+}
+/* Container chính */
+.register-container {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 25px;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
 }
 
-/* Container chính */
-.container {
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 25px;
-    padding: 40px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
-    max-width: 900px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 60px;
-}
 
 /* Khối login */
 .login-section {
@@ -36,9 +39,9 @@ body {
 }
 
 .logo {
-    display: flex;
-    align-items: center;
     margin-bottom: 30px;
+    width: 250px;
+    height: 150px;
 }
 
 .logo-icon {

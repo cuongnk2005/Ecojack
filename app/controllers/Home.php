@@ -44,7 +44,7 @@ class Home extends Controller
   }
    public function register()
   {
-    $this->data["content"] = 'auth/register';
+    $this->data["content"] = 'auth/logintest';
      $this->data['subcontent']['kq'] = "haha";
     $this->render('layout/layout_client', $this->data);
     
