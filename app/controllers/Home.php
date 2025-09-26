@@ -49,5 +49,12 @@ class Home extends Controller
     $this->render('layout/layout_client', $this->data);
     
   }
+   public function test()
+  {
+    $this->data["content"] = 'test/test';
+     $this->data['subcontent']['kq'] = "haha";
+    $this->render('layout/layout_client', $this->data);
+    
+  }
 }
 ?>
