@@ -151,8 +151,22 @@
         <a href="<?php echo _WEB_ROOT_ ?>/home/contact">Liên hệ</a>
       </nav>
       <div class="auth-buttons">
-       <a href="<?php echo _WEB_ROOT_ ?>/home/register"><button>Đăng ký</button></a>
-       <a href="<?php echo _WEB_ROOT_ ?>/home/login"><button>Đăng nhập</button></a>
+        <?php 
+          if (session_status() === PHP_SESSION_NONE) {
+            echo "<script>alert('Session chưa được khởi tạo!');</script>";
+            session_start();
+          }
+        ?>
+        <?php if (isset($_SESSION['user'])): ?>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="user" style="width:32px;height:32px;border-radius:50%;background:#e0f2f1;">
+            <span style="font-size:16px;font-weight:600;color:#2e7d32;">Xin chào, <?php echo htmlspecialchars($_SESSION['user']['username']); ?></span>
+          </div>
+        <?php endif; ?>
+        <?php if (!isset($_SESSION['user'])): ?>
+          <a href="<?php echo _WEB_ROOT_ ?>/home/register"><button>Đăng ký</button></a>
+          <a href="<?php echo _WEB_ROOT_ ?>/home/login"><button>Đăng nhập</button></a>
+        <?php endif; ?>
       </div>
     </div>
   </header>
